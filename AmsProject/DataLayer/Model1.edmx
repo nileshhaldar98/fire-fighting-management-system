@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hasten_AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EnquiryCategory">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+        </EntityType>
+        <EntityType Name="EnquiryGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="EnquiryStatus">
+          <Key>
+            <PropertyRef Name="EnquiryStatusId" />
+          </Key>
+          <Property Name="EnquiryStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EnquiryStatusName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="EnquiryType">
+          <Key>
+            <PropertyRef Name="EnquiryTypeId" />
+          </Key>
+          <Property Name="EnquiryTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EnquiryTypeName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" Nullable="false" />
+          <Property Name="InActiveBy" Type="int" Nullable="false" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FollowUp">
+          <Key>
+            <PropertyRef Name="FollowedUpId" />
+          </Key>
+          <Property Name="FollowedUpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FollowedBy" Type="int" />
+          <Property Name="FollowUpDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="Inquiry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EnquiryId" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="EnquiryType" Type="int" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+          <Property Name="NoFloors" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="500" />
+          <Property Name="EmailId" Type="varchar" MaxLength="60" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+          <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+          <Property Name="Remark" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="Inspection">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InspectionsId" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+          <Property Name="NoFloors" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="500" />
+          <Property Name="EmailId" Type="varchar" MaxLength="60" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+          <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Remark" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActineBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="InspectionMaterials">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InspectionsId" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="EnquiryType" Type="int" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+          <Property Name="NoFloors" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="500" />
+          <Property Name="EmailId" Type="varchar" MaxLength="60" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+          <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Remark" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActineBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="MaterialMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaterialId" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="UnitId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="256" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Rate" Type="float" />
+          <Property Name="Remark" Type="varchar" MaxLength="500" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActineBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="MaterialUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UnitName" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="UnitDecsription" Type="varchar" MaxLength="64" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActineBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="ProfileSentDetails">
+          <Key>
+            <PropertyRef Name="ProfileSentDetailsId" />
+          </Key>
+          <Property Name="ProfileSentDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InquiryId" Type="int" Nullable="false" />
+          <Property Name="EmailTo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CC" Type="varchar" MaxLength="256" />
+          <Property Name="BCC" Type="varchar" MaxLength="256" />
+          <Property Name="Body" Type="varchar(max)" />
+          <Property Name="Attachment" Type="varchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="LoginId" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="IsAdmin" Type="bit" />
+          <Property Name="RoleTypeId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="UserRoleType">
+          <Key>
+            <PropertyRef Name="RoleTypeId" />
+          </Key>
+          <Property Name="RoleTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleTypeName" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="SerialNumber" Type="float" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActivity" Type="int" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="InActiveBy" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <Association Name="FK__EnquiryCa__Group__276EDEB3">
+          <End Role="EnquiryGroup" Type="Self.EnquiryGroup" Multiplicity="1" />
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryGroup">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="EnquiryCategory">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__Enquiry__286302EC">
+          <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryType">
+              <PropertyRef Name="EnquiryTypeId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="EnquiryType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__Enquiry__29572725">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__StatusI__2A4B4B5E">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2B3F6F97">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2D27B809">
+          <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryType">
+              <PropertyRef Name="EnquiryTypeId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="EnquiryType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2E1BDC42">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Statu__2C3393D0">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Statu__2F10007B">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__UnitI__300424B4">
+          <End Role="MaterialUnit" Type="Self.MaterialUnit" Multiplicity="1" />
+          <End Role="MaterialMaster" Type="Self.MaterialMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaterialUnit">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialMaster">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProfileSe__Inqui__30F848ED">
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="1" />
+          <End Role="ProfileSentDetails" Type="Self.ProfileSentDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inquiry">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProfileSentDetails">
+              <PropertyRef Name="InquiryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserMaste__RoleT__31EC6D26">
+          <End Role="UserRoleType" Type="Self.UserRoleType" Multiplicity="1" />
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRoleType">
+              <PropertyRef Name="RoleTypeId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hasten_AMSModelStoreContainer">
+          <EntitySet Name="EnquiryCategory" EntityType="Self.EnquiryCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnquiryGroup" EntityType="Self.EnquiryGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnquiryStatus" EntityType="Self.EnquiryStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnquiryType" EntityType="Self.EnquiryType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FollowUp" EntityType="Self.FollowUp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inquiry" EntityType="Self.Inquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inspection" EntityType="Self.Inspection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InspectionMaterials" EntityType="Self.InspectionMaterials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaterialMaster" EntityType="Self.MaterialMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaterialUnit" EntityType="Self.MaterialUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProfileSentDetails" EntityType="Self.ProfileSentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoleType" EntityType="Self.UserRoleType" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__EnquiryCa__Group__276EDEB3" Association="Self.FK__EnquiryCa__Group__276EDEB3">
+            <End Role="EnquiryGroup" EntitySet="EnquiryGroup" />
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__Enquiry__286302EC" Association="Self.FK__Inquiry__Enquiry__286302EC">
+            <End Role="EnquiryType" EntitySet="EnquiryType" />
+            <End Role="Inquiry" EntitySet="Inquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__Enquiry__29572725" Association="Self.FK__Inquiry__Enquiry__29572725">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+            <End Role="Inquiry" EntitySet="Inquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__StatusI__2A4B4B5E" Association="Self.FK__Inquiry__StatusI__2A4B4B5E">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="Inquiry" EntitySet="Inquiry" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2B3F6F97" Association="Self.FK__Inspectio__Enqui__2B3F6F97">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+            <End Role="Inspection" EntitySet="Inspection" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2D27B809" Association="Self.FK__Inspectio__Enqui__2D27B809">
+            <End Role="EnquiryType" EntitySet="EnquiryType" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2E1BDC42" Association="Self.FK__Inspectio__Enqui__2E1BDC42">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Statu__2C3393D0" Association="Self.FK__Inspectio__Statu__2C3393D0">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="Inspection" EntitySet="Inspection" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Statu__2F10007B" Association="Self.FK__Inspectio__Statu__2F10007B">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__UnitI__300424B4" Association="Self.FK__MaterialM__UnitI__300424B4">
+            <End Role="MaterialUnit" EntitySet="MaterialUnit" />
+            <End Role="MaterialMaster" EntitySet="MaterialMaster" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProfileSe__Inqui__30F848ED" Association="Self.FK__ProfileSe__Inqui__30F848ED">
+            <End Role="Inquiry" EntitySet="Inquiry" />
+            <End Role="ProfileSentDetails" EntitySet="ProfileSentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserMaste__RoleT__31EC6D26" Association="Self.FK__UserMaste__RoleT__31EC6D26">
+            <End Role="UserRoleType" EntitySet="UserRoleType" />
+            <End Role="UserMaster" EntitySet="UserMaster" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hasten_AMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EnquiryCategory">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <NavigationProperty Name="EnquiryGroup" Relationship="Self.FK__EnquiryCa__Group__276EDEB3" FromRole="EnquiryCategory" ToRole="EnquiryGroup" />
+          <NavigationProperty Name="Inquiries" Relationship="Self.FK__Inquiry__Enquiry__29572725" FromRole="EnquiryCategory" ToRole="Inquiry" />
+          <NavigationProperty Name="Inspections" Relationship="Self.FK__Inspectio__Enqui__2B3F6F97" FromRole="EnquiryCategory" ToRole="Inspection" />
+          <NavigationProperty Name="InspectionMaterials" Relationship="Self.FK__Inspectio__Enqui__2E1BDC42" FromRole="EnquiryCategory" ToRole="InspectionMaterials" />
+        </EntityType>
+        <EntityType Name="EnquiryGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnquiryCategories" Relationship="Self.FK__EnquiryCa__Group__276EDEB3" FromRole="EnquiryGroup" ToRole="EnquiryCategory" />
+        </EntityType>
+        <EntityType Name="EnquiryStatu">
+          <Key>
+            <PropertyRef Name="EnquiryStatusId" />
+          </Key>
+          <Property Name="EnquiryStatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EnquiryStatusName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Inquiries" Relationship="Self.FK__Inquiry__StatusI__2A4B4B5E" FromRole="EnquiryStatus" ToRole="Inquiry" />
+          <NavigationProperty Name="Inspections" Relationship="Self.FK__Inspectio__Statu__2C3393D0" FromRole="EnquiryStatus" ToRole="Inspection" />
+          <NavigationProperty Name="InspectionMaterials" Relationship="Self.FK__Inspectio__Statu__2F10007B" FromRole="EnquiryStatus" ToRole="InspectionMaterials" />
+        </EntityType>
+        <EntityType Name="EnquiryType">
+          <Key>
+            <PropertyRef Name="EnquiryTypeId" />
+          </Key>
+          <Property Name="EnquiryTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EnquiryTypeName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" Nullable="false" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Inquiries" Relationship="Self.FK__Inquiry__Enquiry__286302EC" FromRole="EnquiryType" ToRole="Inquiry" />
+          <NavigationProperty Name="InspectionMaterials" Relationship="Self.FK__Inspectio__Enqui__2D27B809" FromRole="EnquiryType" ToRole="InspectionMaterials" />
+        </EntityType>
+        <EntityType Name="FollowUp">
+          <Key>
+            <PropertyRef Name="FollowedUpId" />
+          </Key>
+          <Property Name="FollowedUpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FollowedBy" Type="Int32" />
+          <Property Name="FollowUpDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Inquiry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EnquiryId" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EnquiryType" Type="Int32" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="Int32" Nullable="false" />
+          <Property Name="NoFloors" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="AlternateNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnquiryCategory1" Relationship="Self.FK__Inquiry__Enquiry__29572725" FromRole="Inquiry" ToRole="EnquiryCategory" />
+          <NavigationProperty Name="EnquiryStatu" Relationship="Self.FK__Inquiry__StatusI__2A4B4B5E" FromRole="Inquiry" ToRole="EnquiryStatus" />
+          <NavigationProperty Name="EnquiryType1" Relationship="Self.FK__Inquiry__Enquiry__286302EC" FromRole="Inquiry" ToRole="EnquiryType" />
+          <NavigationProperty Name="ProfileSentDetails" Relationship="Self.FK__ProfileSe__Inqui__30F848ED" FromRole="Inquiry" ToRole="ProfileSentDetails" />
+        </EntityType>
+        <EntityType Name="Inspection">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InspectionsId" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="Int32" Nullable="false" />
+          <Property Name="NoFloors" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="AlternateNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActineBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnquiryCategory1" Relationship="Self.FK__Inspectio__Enqui__2B3F6F97" FromRole="Inspection" ToRole="EnquiryCategory" />
+          <NavigationProperty Name="EnquiryStatu" Relationship="Self.FK__Inspectio__Statu__2C3393D0" FromRole="Inspection" ToRole="EnquiryStatus" />
+        </EntityType>
+        <EntityType Name="InspectionMaterial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InspectionsId" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EnquiryType" Type="Int32" Nullable="false" />
+          <Property Name="EnquiryCategory" Type="Int32" Nullable="false" />
+          <Property Name="NoFloors" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="AlternateNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActineBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnquiryCategory1" Relationship="Self.FK__Inspectio__Enqui__2E1BDC42" FromRole="InspectionMaterials" ToRole="EnquiryCategory" />
+          <NavigationProperty Name="EnquiryStatu" Relationship="Self.FK__Inspectio__Statu__2F10007B" FromRole="InspectionMaterials" ToRole="EnquiryStatus" />
+          <NavigationProperty Name="EnquiryType1" Relationship="Self.FK__Inspectio__Enqui__2D27B809" FromRole="InspectionMaterials" ToRole="EnquiryType" />
+        </EntityType>
+        <EntityType Name="MaterialMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialId" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UnitId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Capacity" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Rate" Type="Double" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActineBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MaterialUnit" Relationship="Self.FK__MaterialM__UnitI__300424B4" FromRole="MaterialMaster" ToRole="MaterialUnit" />
+        </EntityType>
+        <EntityType Name="MaterialUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UnitDecsription" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActineBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MaterialMasters" Relationship="Self.FK__MaterialM__UnitI__300424B4" FromRole="MaterialUnit" ToRole="MaterialMaster" />
+        </EntityType>
+        <EntityType Name="ProfileSentDetail">
+          <Key>
+            <PropertyRef Name="ProfileSentDetailsId" />
+          </Key>
+          <Property Name="ProfileSentDetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InquiryId" Type="Int32" Nullable="false" />
+          <Property Name="EmailTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CC" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="BCC" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Attachment" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Inquiry" Relationship="Self.FK__ProfileSe__Inqui__30F848ED" FromRole="ProfileSentDetails" ToRole="Inquiry" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoginId" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <Property Name="RoleTypeId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserRoleType" Relationship="Self.FK__UserMaste__RoleT__31EC6D26" FromRole="UserMaster" ToRole="UserRoleType" />
+        </EntityType>
+        <EntityType Name="UserRoleType">
+          <Key>
+            <PropertyRef Name="RoleTypeId" />
+          </Key>
+          <Property Name="RoleTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleTypeName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SerialNumber" Type="Double" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActivity" Type="Int32" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="InActiveBy" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserMasters" Relationship="Self.FK__UserMaste__RoleT__31EC6D26" FromRole="UserRoleType" ToRole="UserMaster" />
+        </EntityType>
+        <Association Name="FK__EnquiryCa__Group__276EDEB3">
+          <End Role="EnquiryGroup" Type="Self.EnquiryGroup" Multiplicity="1" />
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryGroup">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="EnquiryCategory">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__Enquiry__29572725">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2B3F6F97">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2E1BDC42">
+          <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="EnquiryCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__StatusI__2A4B4B5E">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatu" Multiplicity="0..1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Statu__2C3393D0">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatu" Multiplicity="0..1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Statu__2F10007B">
+          <End Role="EnquiryStatus" Type="Self.EnquiryStatu" Multiplicity="0..1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryStatus">
+              <PropertyRef Name="EnquiryStatusId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inquiry__Enquiry__286302EC">
+          <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryType">
+              <PropertyRef Name="EnquiryTypeId" />
+            </Principal>
+            <Dependent Role="Inquiry">
+              <PropertyRef Name="EnquiryType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inspectio__Enqui__2D27B809">
+          <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+          <End Role="InspectionMaterials" Type="Self.InspectionMaterial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryType">
+              <PropertyRef Name="EnquiryTypeId" />
+            </Principal>
+            <Dependent Role="InspectionMaterials">
+              <PropertyRef Name="EnquiryType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProfileSe__Inqui__30F848ED">
+          <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="1" />
+          <End Role="ProfileSentDetails" Type="Self.ProfileSentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inquiry">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProfileSentDetails">
+              <PropertyRef Name="InquiryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__UnitI__300424B4">
+          <End Role="MaterialUnit" Type="Self.MaterialUnit" Multiplicity="1" />
+          <End Role="MaterialMaster" Type="Self.MaterialMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaterialUnit">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialMaster">
+              <PropertyRef Name="UnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserMaste__RoleT__31EC6D26">
+          <End Role="UserRoleType" Type="Self.UserRoleType" Multiplicity="1" />
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRoleType">
+              <PropertyRef Name="RoleTypeId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hasten_AMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EnquiryCategories" EntityType="Self.EnquiryCategory" />
+          <EntitySet Name="EnquiryGroups" EntityType="Self.EnquiryGroup" />
+          <EntitySet Name="EnquiryStatus" EntityType="Self.EnquiryStatu" />
+          <EntitySet Name="EnquiryTypes" EntityType="Self.EnquiryType" />
+          <EntitySet Name="FollowUps" EntityType="Self.FollowUp" />
+          <EntitySet Name="Inquiries" EntityType="Self.Inquiry" />
+          <EntitySet Name="Inspections" EntityType="Self.Inspection" />
+          <EntitySet Name="InspectionMaterials" EntityType="Self.InspectionMaterial" />
+          <EntitySet Name="MaterialMasters" EntityType="Self.MaterialMaster" />
+          <EntitySet Name="MaterialUnits" EntityType="Self.MaterialUnit" />
+          <EntitySet Name="ProfileSentDetails" EntityType="Self.ProfileSentDetail" />
+          <EntitySet Name="UserMasters" EntityType="Self.UserMaster" />
+          <EntitySet Name="UserRoleTypes" EntityType="Self.UserRoleType" />
+          <AssociationSet Name="FK__EnquiryCa__Group__276EDEB3" Association="Self.FK__EnquiryCa__Group__276EDEB3">
+            <End Role="EnquiryGroup" EntitySet="EnquiryGroups" />
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__Enquiry__29572725" Association="Self.FK__Inquiry__Enquiry__29572725">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategories" />
+            <End Role="Inquiry" EntitySet="Inquiries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2B3F6F97" Association="Self.FK__Inspectio__Enqui__2B3F6F97">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategories" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2E1BDC42" Association="Self.FK__Inspectio__Enqui__2E1BDC42">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategories" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__StatusI__2A4B4B5E" Association="Self.FK__Inquiry__StatusI__2A4B4B5E">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="Inquiry" EntitySet="Inquiries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Statu__2C3393D0" Association="Self.FK__Inspectio__Statu__2C3393D0">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Statu__2F10007B" Association="Self.FK__Inspectio__Statu__2F10007B">
+            <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inquiry__Enquiry__286302EC" Association="Self.FK__Inquiry__Enquiry__286302EC">
+            <End Role="EnquiryType" EntitySet="EnquiryTypes" />
+            <End Role="Inquiry" EntitySet="Inquiries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inspectio__Enqui__2D27B809" Association="Self.FK__Inspectio__Enqui__2D27B809">
+            <End Role="EnquiryType" EntitySet="EnquiryTypes" />
+            <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProfileSe__Inqui__30F848ED" Association="Self.FK__ProfileSe__Inqui__30F848ED">
+            <End Role="Inquiry" EntitySet="Inquiries" />
+            <End Role="ProfileSentDetails" EntitySet="ProfileSentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__UnitI__300424B4" Association="Self.FK__MaterialM__UnitI__300424B4">
+            <End Role="MaterialUnit" EntitySet="MaterialUnits" />
+            <End Role="MaterialMaster" EntitySet="MaterialMasters" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserMaste__RoleT__31EC6D26" Association="Self.FK__UserMaste__RoleT__31EC6D26">
+            <End Role="UserRoleType" EntitySet="UserRoleTypes" />
+            <End Role="UserMaster" EntitySet="UserMasters" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hasten_AMSModelStoreContainer" CdmEntityContainer="hasten_AMSEntities">
+          <EntitySetMapping Name="EnquiryCategories">
+            <EntityTypeMapping TypeName="hasten_AMSModel.EnquiryCategory">
+              <MappingFragment StoreEntitySet="EnquiryCategory">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnquiryGroups">
+            <EntityTypeMapping TypeName="hasten_AMSModel.EnquiryGroup">
+              <MappingFragment StoreEntitySet="EnquiryGroup">
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnquiryStatus">
+            <EntityTypeMapping TypeName="hasten_AMSModel.EnquiryStatu">
+              <MappingFragment StoreEntitySet="EnquiryStatus">
+                <ScalarProperty Name="EnquiryStatusId" ColumnName="EnquiryStatusId" />
+                <ScalarProperty Name="EnquiryStatusName" ColumnName="EnquiryStatusName" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnquiryTypes">
+            <EntityTypeMapping TypeName="hasten_AMSModel.EnquiryType">
+              <MappingFragment StoreEntitySet="EnquiryType">
+                <ScalarProperty Name="EnquiryTypeId" ColumnName="EnquiryTypeId" />
+                <ScalarProperty Name="EnquiryTypeName" ColumnName="EnquiryTypeName" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FollowUps">
+            <EntityTypeMapping TypeName="hasten_AMSModel.FollowUp">
+              <MappingFragment StoreEntitySet="FollowUp">
+                <ScalarProperty Name="FollowedUpId" ColumnName="FollowedUpId" />
+                <ScalarProperty Name="FollowedBy" ColumnName="FollowedBy" />
+                <ScalarProperty Name="FollowUpDate" ColumnName="FollowUpDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inquiries">
+            <EntityTypeMapping TypeName="hasten_AMSModel.Inquiry">
+              <MappingFragment StoreEntitySet="Inquiry">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EnquiryId" ColumnName="EnquiryId" />
+                <ScalarProperty Name="EnquiryType" ColumnName="EnquiryType" />
+                <ScalarProperty Name="EnquiryCategory" ColumnName="EnquiryCategory" />
+                <ScalarProperty Name="NoFloors" ColumnName="NoFloors" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="AlternateNo" ColumnName="AlternateNo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inspections">
+            <EntityTypeMapping TypeName="hasten_AMSModel.Inspection">
+              <MappingFragment StoreEntitySet="Inspection">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InspectionsId" ColumnName="InspectionsId" />
+                <ScalarProperty Name="EnquiryCategory" ColumnName="EnquiryCategory" />
+                <ScalarProperty Name="NoFloors" ColumnName="NoFloors" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="AlternateNo" ColumnName="AlternateNo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActineBy" ColumnName="InActineBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InspectionMaterials">
+            <EntityTypeMapping TypeName="hasten_AMSModel.InspectionMaterial">
+              <MappingFragment StoreEntitySet="InspectionMaterials">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InspectionsId" ColumnName="InspectionsId" />
+                <ScalarProperty Name="EnquiryType" ColumnName="EnquiryType" />
+                <ScalarProperty Name="EnquiryCategory" ColumnName="EnquiryCategory" />
+                <ScalarProperty Name="NoFloors" ColumnName="NoFloors" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="AlternateNo" ColumnName="AlternateNo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActineBy" ColumnName="InActineBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialMasters">
+            <EntityTypeMapping TypeName="hasten_AMSModel.MaterialMaster">
+              <MappingFragment StoreEntitySet="MaterialMaster">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActineBy" ColumnName="InActineBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialUnits">
+            <EntityTypeMapping TypeName="hasten_AMSModel.MaterialUnit">
+              <MappingFragment StoreEntitySet="MaterialUnit">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitDecsription" ColumnName="UnitDecsription" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActineBy" ColumnName="InActineBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProfileSentDetails">
+            <EntityTypeMapping TypeName="hasten_AMSModel.ProfileSentDetail">
+              <MappingFragment StoreEntitySet="ProfileSentDetails">
+                <ScalarProperty Name="ProfileSentDetailsId" ColumnName="ProfileSentDetailsId" />
+                <ScalarProperty Name="InquiryId" ColumnName="InquiryId" />
+                <ScalarProperty Name="EmailTo" ColumnName="EmailTo" />
+                <ScalarProperty Name="CC" ColumnName="CC" />
+                <ScalarProperty Name="BCC" ColumnName="BCC" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMasters">
+            <EntityTypeMapping TypeName="hasten_AMSModel.UserMaster">
+              <MappingFragment StoreEntitySet="UserMaster">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="RoleTypeId" ColumnName="RoleTypeId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoleTypes">
+            <EntityTypeMapping TypeName="hasten_AMSModel.UserRoleType">
+              <MappingFragment StoreEntitySet="UserRoleType">
+                <ScalarProperty Name="RoleTypeId" ColumnName="RoleTypeId" />
+                <ScalarProperty Name="RoleTypeName" ColumnName="RoleTypeName" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActivity" ColumnName="IsActivity" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="InActiveBy" ColumnName="InActiveBy" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

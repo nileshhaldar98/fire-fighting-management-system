@@ -1,0 +1,15 @@
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\bin\Debug\DataLayer.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\bin\Debug\DataLayer.pdb
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\obj\Debug\DataLayer.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\obj\Debug\DataLayer.pdb
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\bin\Debug\DataLayer.dll.config
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\bin\Debug\EntityFramework.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\bin\Debug\EntityFramework.xml
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\bin\Debug\DataLayer.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\bin\Debug\DataLayer.pdb
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\bin\Debug\EntityFramework.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\bin\Debug\EntityFramework.xml
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\obj\Debug\DataLayer.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\DataLayer\obj\Debug\DataLayer.pdb

@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hasten_AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EnquiryCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+  </EntityType>
+  <EntityType Name="EnquiryGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="EnquiryStatus">
+    <Key>
+      <PropertyRef Name="EnquiryStatusId" />
+    </Key>
+    <Property Name="EnquiryStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnquiryStatusName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="EnquiryType">
+    <Key>
+      <PropertyRef Name="EnquiryTypeId" />
+    </Key>
+    <Property Name="EnquiryTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnquiryTypeName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" Nullable="false" />
+    <Property Name="InActiveBy" Type="int" Nullable="false" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FollowUp">
+    <Key>
+      <PropertyRef Name="FollowedUpId" />
+    </Key>
+    <Property Name="FollowedUpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FollowedBy" Type="int" />
+    <Property Name="FollowUpDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="Inquiry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnquiryId" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="EnquiryType" Type="int" Nullable="false" />
+    <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+    <Property Name="NoFloors" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="EmailId" Type="varchar" MaxLength="60" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+    <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="Inspection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionsId" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+    <Property Name="NoFloors" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="EmailId" Type="varchar" MaxLength="60" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+    <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActineBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="InspectionMaterials">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionsId" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="EnquiryType" Type="int" Nullable="false" />
+    <Property Name="EnquiryCategory" Type="int" Nullable="false" />
+    <Property Name="NoFloors" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="EmailId" Type="varchar" MaxLength="60" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="16" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="64" />
+    <Property Name="AlternateNo" Type="varchar" MaxLength="16" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActineBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="MaterialMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialId" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="UnitId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActineBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="MaterialUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="UnitDecsription" Type="varchar" MaxLength="64" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActineBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="ProfileSentDetails">
+    <Key>
+      <PropertyRef Name="ProfileSentDetailsId" />
+    </Key>
+    <Property Name="ProfileSentDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InquiryId" Type="int" Nullable="false" />
+    <Property Name="EmailTo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CC" Type="varchar" MaxLength="256" />
+    <Property Name="BCC" Type="varchar" MaxLength="256" />
+    <Property Name="Body" Type="varchar(max)" />
+    <Property Name="Attachment" Type="varchar" MaxLength="256" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="LoginId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="RoleTypeId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="UserRoleType">
+    <Key>
+      <PropertyRef Name="RoleTypeId" />
+    </Key>
+    <Property Name="RoleTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleTypeName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="SerialNumber" Type="float" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActivity" Type="int" />
+    <Property Name="InActiveDate" Type="datetime" />
+    <Property Name="InActiveBy" Type="int" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <Association Name="FK__EnquiryCa__Group__276EDEB3">
+    <End Role="EnquiryGroup" Type="Self.EnquiryGroup" Multiplicity="1" />
+    <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryGroup">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="EnquiryCategory">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inquiry__Enquiry__286302EC">
+    <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+    <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryType">
+        <PropertyRef Name="EnquiryTypeId" />
+      </Principal>
+      <Dependent Role="Inquiry">
+        <PropertyRef Name="EnquiryType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inquiry__Enquiry__29572725">
+    <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+    <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Inquiry">
+        <PropertyRef Name="EnquiryCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inquiry__StatusI__2A4B4B5E">
+    <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+    <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryStatus">
+        <PropertyRef Name="EnquiryStatusId" />
+      </Principal>
+      <Dependent Role="Inquiry">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inspectio__Enqui__2B3F6F97">
+    <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+    <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Inspection">
+        <PropertyRef Name="EnquiryCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inspectio__Enqui__2D27B809">
+    <End Role="EnquiryType" Type="Self.EnquiryType" Multiplicity="1" />
+    <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryType">
+        <PropertyRef Name="EnquiryTypeId" />
+      </Principal>
+      <Dependent Role="InspectionMaterials">
+        <PropertyRef Name="EnquiryType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inspectio__Enqui__2E1BDC42">
+    <End Role="EnquiryCategory" Type="Self.EnquiryCategory" Multiplicity="1" />
+    <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="InspectionMaterials">
+        <PropertyRef Name="EnquiryCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inspectio__Statu__2C3393D0">
+    <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+    <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryStatus">
+        <PropertyRef Name="EnquiryStatusId" />
+      </Principal>
+      <Dependent Role="Inspection">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inspectio__Statu__2F10007B">
+    <End Role="EnquiryStatus" Type="Self.EnquiryStatus" Multiplicity="0..1" />
+    <End Role="InspectionMaterials" Type="Self.InspectionMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnquiryStatus">
+        <PropertyRef Name="EnquiryStatusId" />
+      </Principal>
+      <Dependent Role="InspectionMaterials">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MaterialM__UnitI__300424B4">
+    <End Role="MaterialUnit" Type="Self.MaterialUnit" Multiplicity="1" />
+    <End Role="MaterialMaster" Type="Self.MaterialMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaterialUnit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MaterialMaster">
+        <PropertyRef Name="UnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProfileSe__Inqui__30F848ED">
+    <End Role="Inquiry" Type="Self.Inquiry" Multiplicity="1" />
+    <End Role="ProfileSentDetails" Type="Self.ProfileSentDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inquiry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProfileSentDetails">
+        <PropertyRef Name="InquiryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserMaste__RoleT__31EC6D26">
+    <End Role="UserRoleType" Type="Self.UserRoleType" Multiplicity="1" />
+    <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRoleType">
+        <PropertyRef Name="RoleTypeId" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="RoleTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hasten_AMSModelStoreContainer">
+    <EntitySet Name="EnquiryCategory" EntityType="Self.EnquiryCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnquiryGroup" EntityType="Self.EnquiryGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnquiryStatus" EntityType="Self.EnquiryStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnquiryType" EntityType="Self.EnquiryType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FollowUp" EntityType="Self.FollowUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inquiry" EntityType="Self.Inquiry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inspection" EntityType="Self.Inspection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InspectionMaterials" EntityType="Self.InspectionMaterials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaterialMaster" EntityType="Self.MaterialMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaterialUnit" EntityType="Self.MaterialUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfileSentDetails" EntityType="Self.ProfileSentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoleType" EntityType="Self.UserRoleType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EnquiryCa__Group__276EDEB3" Association="Self.FK__EnquiryCa__Group__276EDEB3">
+      <End Role="EnquiryGroup" EntitySet="EnquiryGroup" />
+      <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inquiry__Enquiry__286302EC" Association="Self.FK__Inquiry__Enquiry__286302EC">
+      <End Role="EnquiryType" EntitySet="EnquiryType" />
+      <End Role="Inquiry" EntitySet="Inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inquiry__Enquiry__29572725" Association="Self.FK__Inquiry__Enquiry__29572725">
+      <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+      <End Role="Inquiry" EntitySet="Inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inquiry__StatusI__2A4B4B5E" Association="Self.FK__Inquiry__StatusI__2A4B4B5E">
+      <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+      <End Role="Inquiry" EntitySet="Inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inspectio__Enqui__2B3F6F97" Association="Self.FK__Inspectio__Enqui__2B3F6F97">
+      <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+      <End Role="Inspection" EntitySet="Inspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inspectio__Enqui__2D27B809" Association="Self.FK__Inspectio__Enqui__2D27B809">
+      <End Role="EnquiryType" EntitySet="EnquiryType" />
+      <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inspectio__Enqui__2E1BDC42" Association="Self.FK__Inspectio__Enqui__2E1BDC42">
+      <End Role="EnquiryCategory" EntitySet="EnquiryCategory" />
+      <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inspectio__Statu__2C3393D0" Association="Self.FK__Inspectio__Statu__2C3393D0">
+      <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+      <End Role="Inspection" EntitySet="Inspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inspectio__Statu__2F10007B" Association="Self.FK__Inspectio__Statu__2F10007B">
+      <End Role="EnquiryStatus" EntitySet="EnquiryStatus" />
+      <End Role="InspectionMaterials" EntitySet="InspectionMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MaterialM__UnitI__300424B4" Association="Self.FK__MaterialM__UnitI__300424B4">
+      <End Role="MaterialUnit" EntitySet="MaterialUnit" />
+      <End Role="MaterialMaster" EntitySet="MaterialMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProfileSe__Inqui__30F848ED" Association="Self.FK__ProfileSe__Inqui__30F848ED">
+      <End Role="Inquiry" EntitySet="Inquiry" />
+      <End Role="ProfileSentDetails" EntitySet="ProfileSentDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserMaste__RoleT__31EC6D26" Association="Self.FK__UserMaste__RoleT__31EC6D26">
+      <End Role="UserRoleType" EntitySet="UserRoleType" />
+      <End Role="UserMaster" EntitySet="UserMaster" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

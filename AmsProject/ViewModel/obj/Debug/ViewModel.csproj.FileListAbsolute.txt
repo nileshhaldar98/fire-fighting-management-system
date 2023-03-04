@@ -1,0 +1,9 @@
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\ViewModel\bin\Debug\ViewModel.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\ViewModel\bin\Debug\ViewModel.pdb
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\ViewModel\obj\Debug\ViewModel.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\ViewModel\bin\Debug\ViewModel.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\ViewModel\bin\Debug\ViewModel.pdb
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\ViewModel\obj\Debug\ViewModel.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\ViewModel\obj\Debug\ViewModel.pdb

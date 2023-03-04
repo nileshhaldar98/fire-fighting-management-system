@@ -1,0 +1,22 @@
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\BusinessLayer\bin\Debug\BusinessLayer.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\BusinessLayer\bin\Debug\BusinessLayer.pdb
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\BusinessLayer\obj\Debug\BusinessLayer.dll
+c:\users\admin\documents\visual studio 2015\Projects\AmsProject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\ViewModel.dll
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\ViewModel.pdb
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Admin\documents\visual studio 2015\Projects\AMSProject\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\DataLayer.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\ViewModel.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\ViewModel.pdb
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Engineering stuff\new project data\Demo_project\v2\AmsProject\AmsProject\BusinessLayer\obj\Debug\BusinessLayer.pdb

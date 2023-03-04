@@ -1,0 +1,238 @@
+﻿
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/mainPageLayout.cshtml";
+}
+
+<div class="outter-wp">
+
+    <!--/candile-->
+    <!--/forms-->
+    <div class="forms-main">
+        <h2 class="inner-tittle">Enquiry</h2>
+        <div class="graph-form">
+            <div class="validation-form">
+                <!---->
+                <form id="Enqform">
+                    <div class="col-md-12 form-group1 group-mail">
+                        <label class="control-label">Enquiry Id</label>
+                        <input type="text" placeholder="Enquiry Id" name="EnquiryId" id="EnquiryId">
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="vali-form">
+                        <div class="col-md-6 form-group1">
+                            <label class="control-label">Enquiry Type</label>
+                            <select id="EnquiryType" name="EnquiryType">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group1 form-last">
+                            <label class="control-label">Enquiry Category</label>
+                            <select id="EnquiryCategory" name="EnquiryCategory">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                    <div class="col-md-12 form-group1 group-mail">
+                        <label class="control-label">No. Of Floors</label>
+                        <input type="number" id="NoFloors" name="NoFloors" placeholder="No. Of Floors" >
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="col-md-12 form-group1 ">
+                        <label class="control-label">Address</label>
+                        <textarea placeholder="Your Comment..." id="Address" name="Address" >Address</textarea>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="col-md-12 form-group1 group-mail">
+                        <label class="control-label">Email Id</label>
+                        <input type="text" id="EmailId" name="EmailId" placeholder="Email Id" >
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="vali-form vali-form1">
+                        <div class="col-md-6 form-group1">
+                            <label class="control-label">Contact Person</label>
+                            <input type="text" id="ContactPerson" name="ContactPerson" placeholder="Contact Person">
+                        </div>
+                        <div class="col-md-6 form-group1 form-last">
+                            <label class="control-label">Contact No</label>
+                            <input type="number" name="ContactNo" id="ContactNo" placeholder="Contact No">
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="vali-form vali-form1">
+                        <div class="col-md-6 form-group1">
+                            <label class="control-label">Alternate No</label>
+                            <input type="number" id="AlternateNo" name="AlternateNo" placeholder="Alternate No" >
+                        </div>
+                        <div class="col-md-6 form-group1 form-last">
+                            <label class="control-label">Status</label>
+                            <input type="number" id="StatusId" name="StatusId" placeholder="Status" >
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-12 form-group1 ">
+                        <label class="control-label">Remark</label>
+                        <textarea placeholder="Your Comment..." id="Remark" name="Remark"></textarea>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="col-md-12 form-group">
+                        <div class="checkbox1">
+                            <label class="check">
+                                <input type="checkbox" ng-model="model.winner" id="IsActive" name="IsActive" class="ng-invalid ng-invalid-required">
+                                IsActive
+                            </label>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!---728x90--->
+                    <div class="clearfix"> </div>
+                    <div class="col-md-12 form-group button-2">
+                        <button type="submit" id="enqReg" name="enqReg" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/candile-->
+    <!--Table-->
+    <h3 class="inner-tittle two">Table Grid</h3>
+    <div class="graph">
+        <div class="tables table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>No of Floors</th>
+                        <th>EmailId</th>
+                        <th>Contact Person</th>
+                        <th>Contact No</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active">
+                        <th scope="row">1</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr class="success">
+                        <th scope="row">3</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr class="info">
+                        <th scope="row">5</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr class="warning">
+                        <th scope="row">7</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                    <tr class="danger">
+                        <th scope="row">9</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td><i class="fa fa-pencil-square-o" style="color: #fc0;float: left; margin-right: 10px; font-size: 16px;"></i><i class="fa fa-microphone" style="float: left;color: #333;font-size: 16px;"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Table -->
+
+</div>
+<script src="~/Scripts/amsScript/Enqury.js"></script>

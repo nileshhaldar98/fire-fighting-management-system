@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e3f00f404a90427ca5fca1a3c61898e0" Name="Diagram1">
+        <EntityTypeShape EntityType="hasten_AMSModel.EnquiryCategory" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.EnquiryGroup" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.EnquiryStatu" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.EnquiryType" Width="1.5" PointX="0.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.FollowUp" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.Inquiry" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.Inspection" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.InspectionMaterial" Width="1.5" PointX="9" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.MaterialMaster" Width="1.5" PointX="11" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.MaterialUnit" Width="1.5" PointX="8.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.ProfileSentDetail" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.UserMaster" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="hasten_AMSModel.UserRoleType" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="hasten_AMSModel.FK__EnquiryCa__Group__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inquiry__Enquiry__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inspectio__Enqui__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inspectio__Enqui__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inquiry__StatusI__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inspectio__Statu__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inspectio__Statu__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inquiry__Enquiry__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__Inspectio__Enqui__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__ProfileSe__Inqui__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__MaterialM__UnitI__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="hasten_AMSModel.FK__UserMaste__RoleT__31EC6D26" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

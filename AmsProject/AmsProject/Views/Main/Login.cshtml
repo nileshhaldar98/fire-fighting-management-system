@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+
+}
+
+
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/pages/css/style.css" rel="stylesheet" />
+    <link href="~/pages/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="~/Content/alertify/alertify.default.css" rel="stylesheet" />
+    <link href="~/Content/alertify/alertify.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/materialdesignicons.min.css" rel="stylesheet" />
+   
+</head>
+<body>
+
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+                <div class="row flex-grow">
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="auth-form-transparent text-left p-3">
+                            <div class="brand-logo">
+                                @*<img src="../../images/logo.svg" alt="logo">*@
+                                <h1 style="color:#0ddbb9; text-transform:capitalize !important;">AMS</h1>
+                            </div>
+                            <h4>Welcome back!</h4>
+                            <h6 class="font-weight-light">Happy to see you again!</h6>
+                            <form id="LoginForm" class="pt-3">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+
+
+                                     
+                                    </div>
+                                    <div><label id="errorUname" style="color:red"></label></div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <label for="validationCustom03">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-lock-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                 
+                                        <input type="password" maxlength="8" min="8" class="form-control" name="password" id="password" placeholder="Password">
+
+
+                                    </div>
+                                    <div><label id="errorPass" style="color:red"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+
+                                    </div>
+                                    <label id="Loginmasg" style="color:red"></label>
+                                </div>
+                        
+                                <div class="my-3">
+                    
+                                    <input type="submit" id="btnlogin" class="btn btn-success btn-block btn-lg font-weight-medium auth-form-btn" value=" Login " />
+                                    <label id="Requiredemail" style="color:red"></label>
+                                </div>
+                          
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 login-half-bg d-flex flex-row">
+                        <img src="~/ProImage/Fire-safety.jpg" />
+
+               
+                        <p class="text-white font-weight-medium text-center flex-grow align-self-end"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+
+<script src="~/Scripts/jquery-3.0.0.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+
+    <script src="~/Scripts/alertify/alertify.js"></script>
+</body>
+</html>
+
+
+
